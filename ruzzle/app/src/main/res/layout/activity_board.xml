@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shilpipandey.ruzzle.boardActivity">
+
+    <TextView
+        android:id="@+id/gridTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="16dp"
+        android:text="Total Words"
+        app:layout_constraintBottom_toTopOf="@+id/board"
+        app:layout_constraintEnd_toStartOf="@+id/totalWords"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <GridView
+        android:id="@+id/board"
+        android:layout_width="344dp"
+        android:layout_height="323dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:columnWidth="80dp"
+        android:gravity="center"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWords"></GridView>
+
+    <Button
+        android:id="@+id/isValidWord"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="46dp"
+        android:onClick="isValidWord"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resetWord"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board" />
+
+    <Button
+        android:id="@+id/resetWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="46dp"
+        android:onClick="resetWord"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/isValidWord"
+        app:layout_constraintTop_toBottomOf="@+id/board" />
+
+    <TextView
+        android:id="@+id/totalWords"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="348dp"
+        android:layout_marginTop="32dp"
+        android:text=" 209"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userWordsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="13"
+        app:layout_constraintBottom_toTopOf="@+id/board"
+        app:layout_constraintEnd_toStartOf="@+id/gridTextView"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Your word count"
+        app:layout_constraintBottom_toTopOf="@+id/board"
+        app:layout_constraintEnd_toStartOf="@+id/userWordsCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userWord"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/isValidWord"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board" />
+
+    <TextView
+        android:id="@+id/textview4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="17dp"
+        android:text="Current Word:"
+        app:layout_constraintBottom_toTopOf="@+id/isValidWord"
+        app:layout_constraintEnd_toStartOf="@+id/userWord"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board" />
+
+    <Button
+        android:id="@+id/solveBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Solve"
+        android:onClick="solveBoard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resetWord"
+        app:layout_constraintStart_toEndOf="@+id/isValidWord"
+        app:layout_constraintTop_toBottomOf="@+id/textview4" />
+
+</android.support.constraint.ConstraintLayout>
