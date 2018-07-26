@@ -8,9 +8,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-/**
- * Created by Shilpi Pandey on 30-03-2018.
- */
 
 public class trieDictionary  {
     private int MAX_SIZE=26;
